@@ -1,0 +1,119 @@
+out=['','','','','','','','','','','']
+offset=0
+commands = {
+	'help': (lambda: (
+		out.append(f'[~] : help'),
+		out.append('    =           : scrolls up'),
+		out.append('    -           : scrolls down'),
+		out.append('    clear       : clears the console'),
+		out.append(''),
+		out.append('    ip          : shows your network ip'),
+		out.append('    ping [ip]   : pings ip'),
+		out.append('    lookup [ip] : shows ip information'),
+		out.append('    img [type]  : opens an image of a certain type'),
+		out.append('                  pgif / 4k / hneko / anal / gonewild'),
+		out.append('                  ass / pussy / thigh / boobs'),
+		out.append('    exec        : opens a code editor where you\'re'),
+		out.append('                  able to execute 10 lines of code'),
+		out.append('                  at a time')
+	)),
+
+	'img': (lambda img_type, amount = 1: (
+		out.append(f'[~] : img {img_type} {amount}'),
+		out.append(f'      freak ass nigga ! '),
+		[__import__('webbrowser').open(__import__('requests').get(f'https://nekobot.xyz/api/image?type={img_type}').json()['message']) for _ in range(int(amount))],
+	)),
+
+	'ip': (lambda: (
+		out.append(f'[~] : ip'),
+		ip := __import__('requests').get('https://api.ipify.org').text,
+		out.append('    ' + ip)
+	)),
+
+	'ping': (lambda ip: (
+		out.append(f'[~] : ping {ip}'),
+		ping_information := __import__('subprocess').check_output(f'ping {ip}').decode('utf-8').split('\r\n')[1:-1],
+		[out.append(_) for _ in ping_information]
+	)),
+
+	'lookup': (lambda ip: (
+		out.append(f'[~] : lookup {ip}'),
+		ip_information := __import__('requests').get(f'https://extreme-ip-lookup.com/json/{ip}?key=Qn97RtiI2gwjStzJJjuG').json(),
+		out.append('    continent : ' + ip_information['continent']),
+		out.append('    country   : ' + ip_information['country'] + ' (' + ip_information['countryCode'] + ')'),
+		out.append('    region    : ' + ip_information['city'] + ', ' + ip_information['region']),
+
+		out.append(''),
+		out.append('    asn       : ' + ip_information['asnOrg']),
+		out.append('                ' + ip_information['asnName'] + ' (' + ip_information['asn'] + ')'),
+	)),
+
+	'buffer': (lambda: (
+		[print(f"\033[{2+_};31H"+ ("║ "+out[- ( (11-(_+1)) + offset )]+(" "*(56-len(out[-((11-(_+1)) + offset)])))+"║")) for _ in range(10)]
+	)),
+
+	'hide': (lambda: (
+		[print(f"\033[{2+_};31H"+ ("║ "+(" "*56)+"║")) for _ in range(10)]
+	)),
+
+	'clear': (lambda: (
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+		out.append(' '),
+	)),
+
+	'exec': (lambda: (
+		out.append('[~] : exec'),
+		commands['buffer'](),commands['hide'](),exec('out=(lambda _:out.append("    "+str(_)));\n' + '\n'.join([
+			(n:=('0'*(3-len(str(_))))+str(_),input(f"\033[{1+_};32H {n} : "))[1]
+			for _ in range(1, 11)
+		])),commands['buffer'](),
+	)),
+
+	'-': (lambda : (
+		globals().__setitem__('offset', offset-1)
+	)),
+
+	'=': (lambda : (
+		globals().__setitem__('offset', offset+1)
+	)),
+}
+
+
+image = "   _     _   \n  (c).-.(c)  \n   / ._. \\   \n __\\( Y )/__ \n(_.-/'-'\\-._)\n   || # ||   \n _.' `-' '._ \n(.-./`-'\\.-.)\n`-'     `-\'\n".split('\n')
+
+for _ in range(1000):
+    __import__('os').system('cls && mode con: cols=90 lines=13')
+    size = __import__('shutil').get_terminal_size()
+    c,l=size.columns, size.lines
+    print('\n'.join([line.center(30) for line in image]))
+    print(' [' + (' ' * 26) + ']')
+    print("\033[1;31H" + ("╔" + ("═" * 57) + "╗"))
+
+    [
+        print(f"\033[{2 + _};31H" + (
+            "║ " + out[-((11 - (_ + 1)) + offset)] + (" " * (56 - len(out[-((11 - (_ + 1)) + offset)]))) + "║"
+        )) for _ in range(10)
+    ]
+
+    print("\033[12;31H" + ("╚" + ("═" * 57) + "╝"))
+
+    command = input('\033[A\033[A [ ')
+    command_name = command.split(' ')[0]
+
+    if command_name in commands.keys():
+        try:
+            commands[command_name](*command.split(' ')[1:])
+        except Exception as exception:
+            exception = str(exception).replace('<lambda>()', f'"{command_name}"')\
+                .replace('required positional ', '').replace(' and ', ' & ')
+            out.append(f'[!]: {exception}')
+    else:
+        out.append(f'[!] : command "{command}" not found!')
